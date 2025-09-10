@@ -1,3 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # loads variables from .env file into environment
+
 class cred():
-    OPENAI_API_KEY = "sk-..."   # add your openai key here
-    HF_TOKEN = "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"      # add your serper key here
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    HF_TOKEN = os.getenv("HF_TOKEN")
+    GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
